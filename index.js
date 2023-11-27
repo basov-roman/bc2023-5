@@ -113,8 +113,7 @@ app.put("/notes/:noteName", (req, res) => {
           console.error(err);
           return res.status(500).send("Помилка запису в JSON-файл!");
         }
-
-        res.send("Нотатку успішно оновлено!");
+        res.status(200).send("Нотатку успішно оновлено!");
       });
     }
     else {
